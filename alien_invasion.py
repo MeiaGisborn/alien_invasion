@@ -40,8 +40,7 @@ class AlienInvasion:
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
         # Make the most recently drawn screen visible
-        self.ship.blitme()
-
+        pygame.display.flip()
 
 
 if __name__ == '__main__':
