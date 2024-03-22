@@ -12,10 +12,16 @@ class AlienInvasion:
         # Clock to control the frame rate of a game
         self.clock = pygame.time.Clock()
         self.settings = Settings()
-
+        # Windowed mode
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height)
-        )
+        ) 
+        
+        # FULLSCREEN mode
+        # self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+        # self.settings.screen_width = self.screen.get_rect().width
+        # self.settings.screen_height = self.screen.get_rect().height
+
         pygame.display.set_caption("Alien Invasion")
         self.ship = Ship(self)
         
