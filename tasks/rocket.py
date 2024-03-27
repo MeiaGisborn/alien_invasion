@@ -11,7 +11,7 @@ class RocketSettings:
     def __init__(self):
         self.screen_width = 1200 
         self.screen_height = 800
-        self.background_color = (0, 0, 0)
+        self.background_color = (255, 255, 255)
         self.rocket_speed = 1.5
         
 class Rocket:
@@ -22,7 +22,7 @@ class Rocket:
         self.screen_rect = rk.screen.get_rect()
         self.image = pygame.image.load('assets/rocket.bmp')
         self.rect = self.image.get_rect()
-        self.rect.midbottom = self.screen_rect.midbottom
+        self.rect.center = self.screen_rect.center
         self.x = float(self.rect.x)
         self.y = float(self.rect.y)
         self.moving_right = False
